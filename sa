@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #ffe6f2;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 150px;
+        }
+        #si {
+            font-size: 20px;
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+        }
+        .gif {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        #respuesta {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d63384;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="contenido">
+        <img src="https://media.giphy.com/media/Z21HJj2kz9uBG/giphy.gif" alt="Ositos enamorados" class="gif">
+        <h1>¿Puedes ser mi San Valentín? ❤️</h1>
+        <div class="buttons">
+            <button id="si" onclick="aceptar()">Sí</button>
+            <button id="no" onclick="agrandarSi()">No</button>
+        </div>
+    </div>
+    <script>
+        let tamanoSi = 20;
+        function agrandarSi() {
+            tamanoSi += 10;
+            document.getElementById("si").style.fontSize = tamanoSi + "px";
+        }
+        function aceptar() {
+            document.getElementById("contenido").innerHTML = `
+                <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="Corazón animado" class="gif" style="width: 300px; height: auto;">
+                <p id="respuesta">Sabía que dirías que sí, preciosa Me haces la persona más feliz del mundo y por eso mismo me encantas , muakk
+ 💖</p>
+            `;
+        }
+    </script>
+</body>
+</html>
